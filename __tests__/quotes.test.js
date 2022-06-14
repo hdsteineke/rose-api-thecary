@@ -2,14 +2,14 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
-const { Quote } = require('../lib/models/Quote');
+const Quote  = require('../lib/models/Quote');
 
 describe('quotes routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
 
-  it.skip('should add a new quote', async () => {
+  it('should add a new quote', async () => {
     const quote = new Quote({
       episode_id: '6',
       character_id: '6',
